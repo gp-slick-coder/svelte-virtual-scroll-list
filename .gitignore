@@ -1,11 +1,10 @@
 /node_modules/
 /example/public/build/
-dist/
 types/
+#/dist # for github package reference. 
 .idea/
 .DS_Store
 /build
-/dist
 /.svelte-kit
 /package
 .env
