@@ -198,7 +198,9 @@
     })
 
     function getUniqueIdFromDataSources() {
-        return data.map((dataSource) => dataSource[key])
+        //return data.map((dataSource) => dataSource[key])
+        return data.map((dataSource, i) => i)
+
     }
 
     function onItemResized(event) {
@@ -269,7 +271,8 @@
         </Item>
     {/if}
     <div style="padding: {paddingStyle}" class="virtual-scroll-wrapper">
-        {#each displayItems as dataItem, dataIndex (dataItem[key])}
+        <!-- {#each displayItems as dataItem, dataIndex (dataItem[key])} -->
+        {#each displayItems as dataItem, dataIndex}
             <Item
                     on:resize={onItemResized}
                     uniqueKey={dataItem[key]}
