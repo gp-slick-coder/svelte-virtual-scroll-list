@@ -37,7 +37,6 @@ or
 <div class="vs">
     <VirtualScroll
             data={items}
-            key="id"
             let:data
     >
         <div slot="header">
@@ -75,7 +74,6 @@ More examples available in `example` folder
 | prop            | type     | default        | description                                                        |
 |-----------------|----------|----------------|--------------------------------------------------------------------|
 | data            | object[] | `null`         | Source for list                                                    |
-| key             | string   | `id`           | Unique key for getting data from `data`                            |
 | keeps           | number   | `30`           | Count of rendered items                                            |
 | estimateSize    | number   | `estimateSize` | Estimate size of each item, needs for smooth scrollbar             |
 | isHorizontal    | boolean  | `false`        | Scroll direction                                                   |
@@ -131,7 +129,6 @@ Access to methods by component binding
 
 <VirtualScroll
         data={items}
-        key="id"
         let:data
         let:index
 >
