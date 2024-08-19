@@ -4,11 +4,6 @@
     import {createEventDispatcher, onDestroy, onMount} from "svelte"
 
     /**
-     * Unique key for getting data from `data`
-     * @type {string}
-     */
-    export let key = "id"
-    /**
      * Source for list
      * @type {Array<any>}
      */
@@ -198,9 +193,7 @@
     })
 
     function getUniqueIdFromDataSources() {
-        //return data.map((dataSource) => dataSource[key])
         return data.map((dataSource, i) => i)
-
     }
 
     function onItemResized(event) {
@@ -271,11 +264,10 @@
         </Item>
     {/if}
     <div style="padding: {paddingStyle}" class="virtual-scroll-wrapper">
-        <!-- {#each displayItems as dataItem, dataIndex (dataItem[key])} -->
         {#each displayItems as dataItem, dataIndex}
             <Item
                     on:resize={onItemResized}
-                    uniqueKey={dataItem[key]}
+                    uniqueKey={dataIndex}
                     horizontal={isHorizontal}
                     type="item">
                 <slot data={dataItem} index={dataIndex} />
