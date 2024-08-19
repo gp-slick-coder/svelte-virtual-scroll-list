@@ -1,0 +1,38 @@
+export function isBrowser(): boolean;
+export default class _default {
+    constructor(param: any, callUpdate: any);
+    param: any;
+    callUpdate: any;
+    firstRangeTotalSize: number;
+    firstRangeAverageSize: number;
+    lastCalcIndex: number;
+    fixedSizeValue: number;
+    calcType: string;
+    offset: number;
+    direction: string;
+    range: any;
+    init(param: any, callUpdate: any): void;
+    sizes: Map<any, any> | undefined;
+    destroy(): void;
+    getRange(): any;
+    isBehind(): boolean;
+    isFront(): boolean;
+    getOffset(start: any): any;
+    updateParam(key: any, value: any): void;
+    saveSize(id: any, size: any): void;
+    handleDataSourcesChange(): void;
+    handleSlotSizeChange(): void;
+    handleScroll(offset: any): void;
+    handleFront(): void;
+    handleBehind(): void;
+    getScrollOvers(): number;
+    getIndexOffset(givenIndex: any): number;
+    isFixedType(): boolean;
+    getLastIndex(): number;
+    checkRange(start: any, end: any): void;
+    updateRange(start: any, end: any): void;
+    getEndByStart(start: any): number;
+    getPadFront(): number;
+    getPadBehind(): number;
+    getEstimateSize(): any;
+}

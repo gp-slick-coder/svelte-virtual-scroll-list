@@ -33,7 +33,6 @@
     <VirtualScroll
             bind:this={list}
             data={items}
-            key="uniqueKey"
             let:data
             on:bottom={() => addNotification("bottom")}
             on:top={() => addNotification("top")}
